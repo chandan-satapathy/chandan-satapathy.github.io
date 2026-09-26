@@ -1,0 +1,94 @@
+{
+  "contact": {
+    "email": "satapathy.chandan1008@gmail.com",
+    "location": "Bengaluru, India",
+    "github": "https://github.com/Csatapathy",
+    "linkedin": "https://linkedin.com/in/chandan-satapathy"
+  },
+  "resumeFile": "./assets/resume/Chandan_Satapathy_Resume.pdf",
+  "summary": "Backend Engineer with 3+ years of experience at Udaan.com — India's largest B2B e-commerce platform, serving 3M+ retailers across 900+ cities. As the sole engineer accountable for Warehouse Management System reliability and roadmap, designed and shipped distributed systems spanning inventory tracking, logistics dispatch, and asset reconciliation at scale. Reduced total infrastructure cost by ~20%, improved picking throughput by 50%, and cut P0 detection time by 40% through database performance engineering, microservices architecture and observability. Proficient in Kotlin, Python, TypeScript, Java and cloud-native systems on Azure & AWS, with a strong foundation in data structures, algorithms, and system design.",
+  "experience": [
+    {
+      "company": "UIX Labs",
+      "role": "Software Consultant",
+      "period": "Mar 2026 – Present",
+      "location": "Remote",
+      "bullets": [
+        "Delivering backend architecture and feature development across multiple client projects spanning warehouse management and logistics."
+      ]
+    },
+    {
+      "company": "Udaan.com",
+      "role": "Software Engineer 2",
+      "period": "Aug 2024 – Sept 2025",
+      "location": "Bangalore",
+      "bullets": [
+        "Owned Warehouse Management & Storage Systems (WMS) powering Udaan's B2B supply chain across 20+ warehouses, processing millions of inventory events daily.",
+        "Mentored 2 graduate engineers over 12 months through weekly 1:1s and code reviews; both reached independent sub-system ownership within 6 months.",
+        "Designed and owned Double Dispatch — a parallelised last-mile logistics system — in Kotlin and TypeScript, enabling concurrent last-mile manifest generation across multiple route batches and improving dispatch throughput by ~30% without any additional infrastructure. Led cross-functional design sync with ops and logistics teams to align on dispatch SLAs before implementation.",
+        "Diagnosed parameter-sniffing and missing-index root causes behind query performance degradation and CPU spikes in Azure SQL and CosmosDB — profiled execution plans, redesigned indexes aligned to actual usage patterns, cutting CPU requirements from 32 to 16 cores (50% cost reduction).",
+        "Planned and executed the Asset Receipt Note (ARN) system with concurrency-safe distributed locks given write-heavy, multi-site access patterns; designed CosmosDB bulk upserts for idempotent tote reconciliation; schema supports eventual consistency across 20+ warehouse sites with reconciliation SLAs.",
+        "Contributed to the Fresh vertical platform migration, realigning 15+ legacy warehouse flows with a new distributed architecture — achieving 50% improvement in ground picking times and 80% increase in item accountability.",
+        "Designed idempotent data archival and entity demerger jobs migrating org-level inventory across microservices, reducing active table sizes by ~40% and cutting long-tail query latency on high-cardinality tables.",
+        "Established SLO-aligned error limits and built Prometheus-based observability across 4+ microservices — 4xx/5xx alerts, Jetty request alerts, Slack pipelines — reducing mean time to detection (MTTD) for P0 incidents by ~40%.",
+        "Implemented retry logic, timeouts, and circuit-breaker patterns across Picklist and archival workflows — reducing on-call escalations by ~25% quarter-over-quarter."
+      ]
+    },
+    {
+      "company": "Udaan.com",
+      "role": "Software Engineer 1",
+      "period": "Aug 2022 – Aug 2024",
+      "location": "Bangalore",
+      "bullets": [
+        "Built an anomaly detection framework (Python, Prophet algorithm) integrated into the warehouse data pipeline, reducing system availability drops by 30% across 100K+ daily procurement records.",
+        "Resolved critical CosmosDB throttling by refactoring query patterns and batching bulk writes — reducing throttling events by 37% and cutting cloud DB costs on a high-frequency write workload.",
+        "Designed real-time operational dashboards in React and TypeScript for ground teams, monitoring picking efficiency, failure rates, and warehouse health — adopted across 5+ sites by 100+ ops users.",
+        "Expanded unit and integration test coverage by 25% across the WMS codebase — migrating 50+ test suites to JUnit 5, reducing production deployment regressions."
+      ]
+    },
+    {
+      "company": "Enthire Co.",
+      "role": "Machine Learning Intern",
+      "period": "Jan 2021 – July 2021",
+      "location": "Remote",
+      "bullets": [
+        "Developed production ML models and REST APIs (Python, FastAPI), reducing prediction time lag by 80% and improving accuracy from ~78% to 94% via feature engineering with Scikit-Learn and TensorFlow.",
+        "Built a 1-click AWS deployment module from scratch — auto-provisioning FastAPI backends, containerizing with Docker, and rendering a Streamlit monitoring dashboard — reducing deployment setup from 4+ hours to under 5 minutes (98% reduction)."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "National Institute of Technology, Kurukshetra",
+      "degree": "B.Tech, Electrical Engineering",
+      "period": "Aug 2018 – May 2022",
+      "location": "Kurukshetra, Haryana",
+      "details": [
+        "CGPA: 9.16/10",
+        "Competitive programmer; Electroreck Tech Club Core Member (4 years); Debate Club"
+      ]
+    },
+    {
+      "school": "Ryan International School",
+      "degree": "Senior Secondary (PCM + Economics)",
+      "period": "May 2018",
+      "location": "Gurgaon, Haryana",
+      "details": [
+        "Senior Secondary: 94.4% | Secondary: 10/10 CGPA"
+      ]
+    }
+  ],
+  "skills": [
+    { "category": "Languages", "items": ["Kotlin", "Java", "Python", "JavaScript", "TypeScript", "Dart"] },
+    { "category": "Databases", "items": ["Azure SQL", "CosmosDB", "MongoDB", "MySQL", "Redis"] },
+    { "category": "Frameworks", "items": ["FastAPI", "Flask", "Django", "Pyramid", "Flutter", "Terraform"] },
+    { "category": "Cloud", "items": ["Microsoft Azure", "AWS (Lambda, EC2, S3)", "Google Cloud Platform", "Serverless"] },
+    { "category": "ML / Data", "items": ["TensorFlow", "Scikit-Learn", "Pandas", "NumPy", "SciPy", "Matplotlib", "Docker"] },
+    { "category": "Core CS", "items": ["Distributed Systems", "System Design", "Data Structures & Algorithms", "Concurrency", "TDD", "CI/CD"] }
+  ],
+  "achievements": [
+    "Google Hash Code 2021 — Global Rank 2,613 out of hundreds of thousands of participants worldwide.",
+    "HackerRank Algorithms — Rank 3,210 / 3.4M+ (top 0.01% globally); CodeChef September Challenge 2020 — Global Rank 357 / 30,000."
+  ],
+  "interests": "Finance, economics & international affairs; competitive programming; avid reader of novels and mythology."
+}

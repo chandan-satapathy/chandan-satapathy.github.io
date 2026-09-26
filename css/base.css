@@ -1,0 +1,198 @@
+/* ==========================================================================
+   base.css — reset, CSS custom properties (themes), typography, utilities
+   ========================================================================== */
+
+/* ---- Theme tokens -------------------------------------------------------
+   Light is the default (data-theme is set to "light" pre-paint by the
+   inline head script, but these :root values are the fallback too). */
+:root,
+[data-theme="light"] {
+  --bg: #fafaf7;
+  --bg-raised: #f2f1ea;
+  --ink: #1b1e1c;
+  --ink-soft: #4b504c;
+  --ink-faint: #83887f;
+  --accent: #0a7d33;
+  --accent-ink: #ffffff;
+  --border: #dcdcd2;
+  --border-strong: #c3c4b8;
+  --code-bg: #f0efe6;
+  --shadow: 0 1px 2px rgba(20, 20, 15, 0.04);
+  --selection-bg: #0a7d3333;
+  --scrollbar: #c3c4b8;
+}
+
+[data-theme="dark"] {
+  --bg: #0d1117;
+  --bg-raised: #151b23;
+  --ink: #e6edf3;
+  --ink-soft: #a9b3bd;
+  --ink-faint: #6e7681;
+  --accent: #3ddc84;
+  --accent-ink: #05130a;
+  --border: #232b34;
+  --border-strong: #313c47;
+  --code-bg: #131a22;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --selection-bg: #3ddc8433;
+  --scrollbar: #313c47;
+}
+
+/* ---- Reset --------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---- Base typography ------------------------------------------------------ */
+html {
+  scrollbar-color: var(--scrollbar) transparent;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+code,
+pre,
+kbd {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+::selection {
+  background: var(--selection-bg);
+}
+
+/* Focus states — visible everywhere, keyboard-friendly */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ---- Utilities ------------------------------------------------------------ */
+.container {
+  width: 100%;
+  max-width: 860px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.mono {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.command-heading {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  text-transform: none;
+}
+
+.command-heading::before {
+  content: "> ";
+  opacity: 0.75;
+}

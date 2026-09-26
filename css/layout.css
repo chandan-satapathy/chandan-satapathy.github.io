@@ -1,0 +1,213 @@
+/* ==========================================================================
+   layout.css — header, nav, footer, page container (chrome injected by
+   js/layout.js on every page)
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .container,
+.site-footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 3.25rem;
+  padding-block: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.site-mark {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.site-mark:hover,
+.site-mark:focus-visible {
+  color: var(--accent);
+}
+
+.site-mark .blink {
+  color: var(--accent);
+}
+
+.nav-cluster {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85rem;
+}
+
+.nav-links a {
+  position: relative;
+  padding: 0.2rem 0.05rem;
+  color: var(--ink-soft);
+  transition: color 0.15s ease;
+}
+
+.nav-links a::before {
+  content: "[";
+  opacity: 0;
+  margin-right: 1px;
+  transition: opacity 0.15s ease;
+  color: var(--accent);
+}
+
+.nav-links a::after {
+  content: "]";
+  opacity: 0;
+  margin-left: 1px;
+  transition: opacity 0.15s ease;
+  color: var(--accent);
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--accent);
+}
+
+.nav-links a:hover::before,
+.nav-links a:hover::after,
+.nav-links a:focus-visible::before,
+.nav-links a:focus-visible::after {
+  opacity: 1;
+}
+
+.nav-links a[aria-current="page"] {
+  color: var(--accent);
+}
+
+.nav-links a[aria-current="page"]::before,
+.nav-links a[aria-current="page"]::after {
+  opacity: 1;
+}
+
+.icon-links {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+  color: var(--ink-soft);
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.icon-link svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.icon-link:hover,
+.icon-link:focus-visible {
+  color: var(--accent);
+  background: var(--bg-raised);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  height: 2rem;
+  padding-inline: 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.theme-toggle svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--bg-raised);
+}
+
+/* ---- Footer --------------------------------------------------------------- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+  padding-block: 0.5rem;
+}
+
+.site-footer .container {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.9rem;
+  padding-block: 1.25rem;
+}
+
+.footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.footer-tagline {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+}
+
+@media (max-width: 480px) {
+  .site-header .container {
+    gap: 0.5rem;
+  }
+
+  .nav-cluster {
+    gap: 0.6rem;
+  }
+
+  .nav-links {
+    gap: 0.6rem;
+    font-size: 0.78rem;
+  }
+
+  .theme-toggle span.toggle-label {
+    display: none;
+  }
+
+  .theme-toggle {
+    padding-inline: 0.4rem;
+  }
+
+  .footer-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+}

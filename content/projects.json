@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "slug": "sample-project-one",
+      "title": "Sample Project One",
+      "date": "2026-01-15",
+      "description": "A placeholder entry — one line about what this project does and why it exists.",
+      "tags": ["python", "fastapi"],
+      "github": "https://github.com/Csatapathy",
+      "featured": true
+    },
+    {
+      "slug": "sample-project-two",
+      "title": "Sample Project Two",
+      "date": "2025-11-02",
+      "description": "Another placeholder — replace me by editing content/projects.json.",
+      "tags": ["kotlin", "distributed-systems"],
+      "github": "https://github.com/Csatapathy",
+      "featured": false
+    }
+  ]
+}

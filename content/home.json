@@ -1,0 +1,9 @@
+{
+  "name": "Chandan Satapathy",
+  "typewriter": "Welcome to my little corner on the Internet.",
+  "summary": "I'm a backend engineer with 3+ years of experience building distributed systems at Udaan — India's largest B2B e-commerce platform. I've owned warehouse management systems end to end: inventory tracking, logistics dispatch, and asset reconciliation at scale. I care about performant databases, clean architecture, and observability. Off the keyboard, I read novels and mythology, follow finance and international affairs, and still enjoy competitive programming.",
+  "quickLinks": [
+    { "label": "view work", "href": "./work.html" },
+    { "label": "browse projects", "href": "./projects.html" }
+  ]
+}

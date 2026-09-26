@@ -1,0 +1,586 @@
+/* ==========================================================================
+   pages.css — page-specific styles (landing, work, projects, blog, 404)
+   ========================================================================== */
+
+/* ---- Landing --------------------------------------------------------------- */
+.hero {
+  min-height: calc(100vh - 3.25rem - 6rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-block: 3.5rem;
+  gap: 1.5rem;
+}
+
+.hero-prompt {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.02em;
+}
+
+.hero-name {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: clamp(1.6rem, 5vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.hero-name .accent {
+  color: var(--accent);
+}
+
+.hero-typewriter {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: clamp(0.95rem, 2.4vw, 1.15rem);
+  color: var(--ink-soft);
+  min-height: 1.6em;
+}
+
+.hero-typewriter .cursor {
+  display: inline-block;
+  width: 0.55em;
+  margin-left: 1px;
+  background: var(--accent);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-typewriter .cursor {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+.hero-summary {
+  max-width: 620px;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.75;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hero-summary.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-links {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.5s ease 0.15s, transform 0.5s ease 0.15s;
+}
+
+.hero-links.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-links a {
+  color: var(--ink-soft);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.hero-links a::before {
+  content: "$ ";
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+.hero-links a:hover,
+.hero-links a:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ---- Page header (work / projects / project) ------------------------------ */
+.page-head {
+  padding-block: 2.5rem 1.5rem;
+}
+
+.page-head h1 {
+  font-size: clamp(1.4rem, 3.4vw, 1.9rem);
+}
+
+.page-head .page-sub {
+  margin-top: 0.6rem;
+  color: var(--ink-soft);
+  max-width: 620px;
+}
+
+/* ---- Resume download button ------------------------------------------------ */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.download-btn svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.download-btn:hover,
+.download-btn:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--accent) 35%, transparent);
+  opacity: 0.95;
+}
+
+/* ---- Hoverable section / entry cards (resume + projects) ------------------- */
+.section-block {
+  padding-block: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.section-block:first-of-type {
+  border-top: none;
+}
+
+.entry-card {
+  position: relative;
+  padding: 1rem 1.1rem;
+  margin-block: 0.6rem;
+  border-radius: 8px;
+  border-left: 3px solid transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.entry-card:hover,
+.entry-card:focus-within {
+  background: var(--bg-raised);
+  border-left-color: var(--accent);
+}
+
+.entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.4rem 1rem;
+}
+
+.entry-role {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.entry-company {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.entry-meta {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+  white-space: nowrap;
+  text-align: right;
+}
+
+.entry-location {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin-top: 0.15rem;
+}
+
+.entry-bullets {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.entry-bullets li {
+  position: relative;
+  padding-left: 1.1rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+.entry-bullets li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.skill-card .skill-cat {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skill-tag {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.78rem;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--ink-soft);
+}
+
+.achievements-list li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-block: 0.4rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+.achievements-list li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.summary-text {
+  color: var(--ink-soft);
+  line-height: 1.75;
+}
+
+.interests-text {
+  color: var(--ink-soft);
+  line-height: 1.75;
+}
+
+/* ---- Projects list ---------------------------------------------------------- */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding-block: 1.5rem 3rem;
+}
+
+.project-card {
+  display: block;
+  padding: 1.25rem 1.35rem;
+  border: 1px solid var(--border);
+  border-left: 3px solid transparent;
+  border-radius: 10px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.project-card:hover,
+.project-card:focus-visible {
+  background: var(--bg-raised);
+  border-left-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.project-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 1rem;
+}
+
+.project-title {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.project-card:hover .project-title,
+.project-card:focus-visible .project-title {
+  color: var(--accent);
+}
+
+.project-date {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+.project-desc {
+  margin-top: 0.5rem;
+  color: var(--ink-soft);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.featured-badge {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.68rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  color: var(--accent);
+  vertical-align: middle;
+}
+
+.empty-state {
+  color: var(--ink-faint);
+  padding-block: 2rem;
+}
+
+/* ---- Blog / project detail --------------------------------------------------- */
+.blog-header {
+  padding-block: 2.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.blog-title {
+  font-size: clamp(1.5rem, 3.6vw, 2.1rem);
+}
+
+.blog-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 0.9rem;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+}
+
+.blog-github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.blog-github-link svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex-shrink: 0;
+}
+
+.blog-github-link:hover,
+.blog-github-link:focus-visible {
+  text-decoration: underline;
+}
+
+.blog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.9rem;
+}
+
+.blog-body {
+  padding-block: 2rem 3rem;
+  color: var(--ink);
+  line-height: 1.8;
+}
+
+.blog-body h1,
+.blog-body h2,
+.blog-body h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.blog-body h1:first-child,
+.blog-body h2:first-child,
+.blog-body h3:first-child {
+  margin-top: 0;
+}
+
+.blog-body p {
+  margin-bottom: 1.1rem;
+  color: var(--ink-soft);
+}
+
+.blog-body ul,
+.blog-body ol {
+  margin-bottom: 1.1rem;
+  padding-left: 1.4rem;
+}
+
+.blog-body ul {
+  list-style: disc;
+}
+
+.blog-body ol {
+  list-style: decimal;
+}
+
+.blog-body li {
+  color: var(--ink-soft);
+  margin-block: 0.3rem;
+}
+
+.blog-body a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.blog-body blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  margin: 1.25rem 0;
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+.blog-body code {
+  background: var(--code-bg);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+.blog-body pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  padding: 1rem 1.1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+}
+
+.blog-body pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.85em;
+}
+
+.blog-body img {
+  border-radius: 8px;
+  margin-block: 1rem;
+  border: 1px solid var(--border);
+}
+
+.blog-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin-block: 2rem;
+}
+
+.blog-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.blog-back-link:hover,
+.blog-back-link:focus-visible {
+  color: var(--accent);
+}
+
+/* ---- Error states (blog not found / 404) ------------------------------------ */
+.error-state {
+  min-height: calc(100vh - 3.25rem - 6rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  padding-block: 3rem;
+}
+
+.error-code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.error-message {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--ink-soft);
+  font-size: 1rem;
+}
+
+.error-link {
+  margin-top: 0.5rem;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.95rem;
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 2px;
+}
+
+.error-link:hover,
+.error-link:focus-visible {
+  opacity: 0.8;
+}
+
+/* ---- Responsive: two-column entry heads collapse on mobile ------------------ */
+@media (max-width: 600px) {
+  .entry-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .entry-meta {
+    text-align: left;
+  }
+
+  .project-card-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    padding-inline: 1rem;
+  }
+}
