@@ -4,7 +4,7 @@ Personal portfolio for **Chandan Satapathy**, backend engineer. Static site for 
 
 ## 1. Goals & constraints
 
-- **Static only.** Must work on GitHub Pages with zero build tooling. Use relative paths everywhere (`./content/...`, not `/content/...`) so it works at both `csatapathy.github.io` and project-page subpaths.
+- **Static only.** Must work on GitHub Pages with zero build tooling. Use relative paths everywhere (`./content/...`, not `/content/...`) so it works at both `chandan-satapathy.github.io` and project-page subpaths.
 - **Content lives in data files, not markup.** All editable text goes in JSON under `content/`; project blog posts are Markdown under `content/blogs/`. HTML pages are dumb shells that render data.
 - **DRY.** Header and footer are built once in JS and injected on every page. Theme, typewriter, markdown rendering are shared modules. No copy-pasted nav markup across pages.
 - **Responsive.** Looks polished on phones (~375px) and laptops. Mobile nav collapses gracefully (icons stay, text links can compress; a hamburger is NOT required if the nav fits — prefer keeping all links visible with tighter spacing).
@@ -103,7 +103,7 @@ Personal portfolio for **Chandan Satapathy**, backend engineer. Static site for 
   "contact": {
     "email": "satapathy.chandan1008@gmail.com",
     "location": "Bengaluru, India",
-    "github": "https://github.com/Csatapathy",
+    "github": "https://github.com/chandan-satapathy",
     "linkedin": "https://linkedin.com/in/chandan-satapathy"
   },
   "resumeFile": "./assets/resume/Chandan_Satapathy_Resume.pdf",
@@ -138,7 +138,7 @@ Personal portfolio for **Chandan Satapathy**, backend engineer. Static site for 
       "date": "2026-01-15",
       "description": "A placeholder entry — one line about what this project does and why it exists.",
       "tags": ["python", "fastapi"],
-      "github": "https://github.com/Csatapathy",
+      "github": "https://github.com/chandan-satapathy",
       "featured": true
     },
     {
@@ -147,7 +147,7 @@ Personal portfolio for **Chandan Satapathy**, backend engineer. Static site for 
       "date": "2025-11-02",
       "description": "Another placeholder — replace me by editing content/projects.json.",
       "tags": ["kotlin", "distributed-systems"],
-      "github": "https://github.com/Csatapathy",
+      "github": "https://github.com/chandan-satapathy",
       "featured": false
     }
   ]
@@ -181,7 +181,7 @@ Right: `home` · `work` · `projects` · LinkedIn icon · GitHub icon · theme t
 - A small line like `© 2026 Chandan Satapathy · built by hand, no frameworks` (keep it tasteful).
 
 ### Links config (single source of truth in `layout.js`)
-- GitHub: `https://github.com/Csatapathy`
+- GitHub: `https://github.com/chandan-satapathy`
 - LinkedIn: `https://linkedin.com/in/chandan-satapathy`
 - Email: `satapathy.chandan1008@gmail.com`
 
@@ -199,7 +199,7 @@ Right: `home` · `work` · `projects` · LinkedIn icon · GitHub icon · theme t
 
 ## 7. Resume data (transcribe faithfully into `content/work.json`)
 
-**Contact:** satapathy.chandan1008@gmail.com · Bengaluru, India · github.com/Csatapathy · linkedin.com/in/chandan-satapathy
+**Contact:** satapathy.chandan1008@gmail.com · Bengaluru, India · github.com/chandan-satapathy · linkedin.com/in/chandan-satapathy
 (Do not publish the phone number on the website.)
 
 **Summary:** Backend Engineer with 3+ years of experience at Udaan.com — India's largest B2B e-commerce platform, serving 3M+ retailers across 900+ cities. As the sole engineer accountable for Warehouse Management System reliability and roadmap, designed and shipped distributed systems spanning inventory tracking, logistics dispatch, and asset reconciliation at scale. Reduced total infrastructure cost by ~20%, improved picking throughput by 50%, and cut P0 detection time by 40% through database performance engineering, microservices architecture and observability. Proficient in Kotlin, Python, TypeScript, Java and cloud-native systems on Azure & AWS, with a strong foundation in data structures, algorithms, and system design.

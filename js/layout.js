@@ -8,7 +8,7 @@ import { getCurrentTheme, toggleTheme } from "./theme.js";
 
 // ---- Single source of truth for links --------------------------------------
 const LINKS = {
-  github: "https://github.com/Csatapathy",
+  github: "https://github.com/chandan-satapathy",
   linkedin: "https://linkedin.com/in/chandan-satapathy",
   email: "satapathy.chandan1008@gmail.com",
 };

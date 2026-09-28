@@ -5,13 +5,14 @@
   2. Add a matching entry to content/projects.json with the SAME "slug", plus
      title, date, description, tags, github link, and "featured" (true/false).
   3. Replace everything below with your real write-up. Delete this comment block.
+     Follow BLOG_STYLE.md at the repo root (voice, structure, memes, privacy rules).
+     Don't add a "# Title" line: the page header already shows the title from projects.json.
 
   Supported markdown: headings, paragraphs, bold/italic, links, lists,
   blockquotes, inline `code`, fenced code blocks, and images
-  (![alt](../assets/images/your-image.png)).
+  (![alt](./assets/images/<slug>/your-image.png)).
+  Image paths start with ./ because posts render inside project.html at the site root.
 -->
-
-# Project Title Goes Here
 
 A one- or two-sentence hook describing what this project is and why it exists.
 

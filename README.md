@@ -26,8 +26,8 @@ HTML or JS.
 │   ├── projects.json        project list metadata
 │   └── blogs/
 │       ├── _template.md     copy this to start a new project write-up
-│       ├── sample-project-one.md
-│       └── sample-project-two.md
+│       ├── snitch.md, persist.md, book-notes.md, whatsapp-notes.md   project posts
+│       └── (see BLOG_STYLE.md at the repo root for how to write one)
 ├── css/
 │   ├── base.css             reset, theme variables (light/dark), typography
 │   ├── layout.css           header/nav/footer chrome
@@ -84,7 +84,7 @@ new PDF (keep the same filename, or update `resumeFile` in
      "date": "2026-07-06",
      "description": "One line describing the project.",
      "tags": ["python", "postgres"],
-     "github": "https://github.com/Csatapathy/your-repo",
+     "github": "https://github.com/chandan-satapathy/your-repo",
      "featured": false
    }
    ```
@@ -119,15 +119,15 @@ errors. Stop the server with `Ctrl+C`.
 
 ## Deploying to GitHub Pages
 
-1. Create a new GitHub repository (e.g. `github.com/Csatapathy/website` or
-   `Csatapathy.github.io` for a user site).
+1. Create a new GitHub repository (e.g. `github.com/chandan-satapathy/website` or
+   `chandan-satapathy.github.io` for a user site).
 2. Push this directory to the `main` branch:
    ```bash
    git init
    git add .
    git commit -m "Initial portfolio site"
    git branch -M main
-   git remote add origin https://github.com/Csatapathy/<repo-name>.git
+   git remote add origin https://github.com/chandan-satapathy/<repo-name>.git
    git push -u origin main
    ```
 3. On GitHub: go to **Settings → Pages**.
@@ -135,9 +135,9 @@ errors. Stop the server with `Ctrl+C`.
    branch `main`, folder `/ (root)`.
 5. Save. GitHub Pages will build and publish the site (usually within a
    minute). Your site will be live at:
-   - `https://csatapathy.github.io/` (if the repo is named
-     `Csatapathy.github.io`), or
-   - `https://csatapathy.github.io/<repo-name>/` (project page — this is why
+   - `https://chandan-satapathy.github.io/` (if the repo is named
+     `chandan-satapathy.github.io`), or
+   - `https://chandan-satapathy.github.io/<repo-name>/` (project page — this is why
      every internal link in this site uses **relative paths**, so it works
      at either root or a subpath without any changes).
 6. `.nojekyll` is already included so GitHub Pages serves files (including

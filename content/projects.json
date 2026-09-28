@@ -1,21 +1,38 @@
 {
   "projects": [
     {
-      "slug": "sample-project-one",
-      "title": "Sample Project One",
-      "date": "2026-01-15",
-      "description": "A placeholder entry — one line about what this project does and why it exists.",
-      "tags": ["python", "fastapi"],
-      "github": "https://github.com/Csatapathy",
-      "featured": true
+      "slug": "snitch",
+      "title": "Building Snitch: A Calorie Tracker That Speaks Roti and Dal",
+      "date": "2026-09-18",
+      "description": "I wanted to log “2 roti and 1 cup dal” in one sentence. Seven days of Opus planning and Sonnet coding later, I can.",
+      "tags": ["android", "kotlin", "ai-agents", "gemini"],
+      "github": "https://github.com/chandan-satapathy/snitch",
+      "featured": false
     },
     {
-      "slug": "sample-project-two",
-      "title": "Sample Project Two",
-      "date": "2025-11-02",
-      "description": "Another placeholder — replace me by editing content/projects.json.",
-      "tags": ["kotlin", "distributed-systems"],
-      "github": "https://github.com/Csatapathy",
+      "slug": "persist",
+      "title": "Building persist: A Streak App That Roasts Me Into Showing Up",
+      "date": "2026-07-18",
+      "description": "A local-only Android app that turns my daily non-negotiables into a hardcore streak, and roasts me when I slack off.",
+      "tags": ["android", "kotlin", "ai-agents", "gamification"],
+      "github": "https://github.com/chandan-satapathy/just_do_it",
+      "featured": false
+    },
+    {
+      "slug": "book-notes",
+      "title": "Building Book Notes: A Reading Journal That Reads the Page for Me",
+      "date": "2026-07-08",
+      "description": "Shelves, a reading journal, quotes lifted from a photo of the page and voice notes, all searchable and all on my phone.",
+      "tags": ["android", "kotlin", "ai-agents", "ocr"],
+      "github": "https://github.com/chandan-satapathy/book_notes",
+      "featured": false
+    },
+    {
+      "slug": "whatsapp-notes",
+      "title": "Building WhatsApp Notes: Rescuing Messages From Group-Chat Chaos",
+      "date": "2026-07-07",
+      "description": "Important stuff kept getting buried in my WhatsApp groups, so I built an app that emails it to me as tidy notes.",
+      "tags": ["android", "kotlin", "ai-agents", "gmail-api"],
       "featured": false
     }
   ]
